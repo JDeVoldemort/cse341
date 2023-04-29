@@ -1,3 +1,25 @@
-GET http://localhost:3000 HTTP/1.1
+GET http://localhost:8080 HTTP/1.1
+###
 
+GET http://localhost:8080/contacts HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d905d42a2889010a939f2 HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d957b42a2889010a939f8 HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d95bb42a2889010a939fb HTTP/1.1
+###
+GET http://localhost:8080/contacts/644d95b042a2889010a939fa HTTP/1.1
+###
 GET https://cse-341-test-dhh4.onrender.com/ HTTP/1.1
+###
+GET https://cse-341-test-dhh4.onrender.com/contacts HTTP/1.1
+###
+GET https://cse-341-test-dhh4.onrender.com/contacts/644d905d42a2889010a939f2 HTTP/1.1
+###
+GET https://cse-341-test-dhh4.onrender.com/contacts/644d905d42a2889010a939f2 HTTP/1.1
+###
+GET https://cse-341-test-dhh4.onrender.com/contacts/644d905d42a2889010a939f2 HTTP/1.1
+###
+GET https://cse-341-test-dhh4.onrender.com/contacts/644d905d42a2889010a939f2 HTTP/1.1
+###

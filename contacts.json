@@ -1,0 +1,30 @@
+{
+    "contact": {
+        "firstName": "OwenHeim",
+        "lastName": "DeMordor",
+        "email": "Mordor@gmail.net",
+        "favoriteColor": "Sea Green",
+        "birthday": "10/23/2000"
+    },
+    "contact2": {
+        "firstName": "Mad",
+        "lastName": "DeMordor",
+        "email": "Mad@gmail.net",
+        "favoriteColor": "Teal",
+        "birthday": "04/23/1986"
+    },
+    "contact3": {
+        "firstName": "Maud",
+        "lastName": "DeMordor",
+        "email": "Maud@gmail.net",
+        "favoriteColor": "Orange",
+        "birthday": "05/23/1992"
+    },
+    "contact4": {
+        "firstName": "Snake",
+        "lastName": "Slitheryn",
+        "email": "Salizar@gmail.net",
+        "favoriteColor": "Green",
+        "birthday": "10/04/1977"
+    }
+}
