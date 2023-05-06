@@ -11,9 +11,35 @@ GET http://localhost:8080/contacts/644d95bb42a2889010a939fb HTTP/1.1
 ###
 GET http://localhost:8080/contacts/644d95b042a2889010a939fa HTTP/1.1
 ###
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
 
+{
+    "firstName":"Aragorn",
+    "lastName":"Strider",
+    "email":"Strider@gmail.net",
+    "favoriteColor":"green",
+    "birthday":"09/1/1954"
+}
+### PUT contact
+PUT http://localhost:8080/contacts/645569048c151a7063a19ef6 HTTP/1.1
+content-type: application/json
 
+{
+    "firstName":"Arwyn",
+    "lastName":"Strider",
+    "email":"Arwyn@gmail.net",
+    "favoriteColor":"Blue",
+    "birthday":"12/1/1944"
+}
+###
+GET http://localhost:8080/contacts/645569048c151a7063a19ef6 HTTP/1.1
 
+### DELETE contact
+DELETE http://localhost:8080/contacts/6456c3e6c67854b6f06f25e5 HTTP/1.1
+
+###
 GET https://cse-341-test-dhh4.onrender.com/ HTTP/1.1
 ###
 
@@ -28,4 +54,33 @@ GET https://cse-341-test-dhh4.onrender.com/contacts/644d957b42a2889010a939f8 HTT
 GET https://cse-341-test-dhh4.onrender.com/contacts/644d95bb42a2889010a939fb HTTP/1.1
 ###
 GET https://cse-341-test-dhh4.onrender.com/contacts/644d95b042a2889010a939fa HTTP/1.1
+###
+
+### Create contact
+POST https://cse-341-test-dhh4.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Frodo",
+    "lastName":"Baggins",
+    "email":"Baggins@gmail.net",
+    "favoriteColor":"green",
+    "birthday":"09/1/1959"
+}
+### PUT contact
+PUT https://cse-341-test-dhh4.onrender.com/contacts/645569048c151a7063a19ef6 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Arwyn",
+    "lastName":"Strider",
+    "email":"Arwyn@gmail.net",
+    "favoriteColor":"Blue",
+    "birthday":"12/1/1944"
+}
+###
+
+### DELETE contact
+DELETE https://cse-341-test-dhh4.onrender.com/contacts/6456c3e6c67854b6f06f25e5 HTTP/1.1
+
 ###
