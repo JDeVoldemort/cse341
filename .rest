@@ -68,19 +68,19 @@ content-type: application/json
     "birthday":"09/1/1959"
 }
 ### PUT contact
-PUT https://cse-341-test-dhh4.onrender.com/contacts/645569048c151a7063a19ef6 HTTP/1.1
+PUT https://cse-341-test-dhh4.onrender.com/contacts/6456cd85ab2439591bf089b4 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Arwyn",
-    "lastName":"Strider",
-    "email":"Arwyn@gmail.net",
-    "favoriteColor":"Blue",
-    "birthday":"12/1/1944"
+    "firstName":"Sam",
+    "lastName":"Gamgi",
+    "email":"TheShire@gmail.net",
+    "favoriteColor":"Brown",
+    "birthday":"12/1/1965"
 }
 ###
 
 ### DELETE contact
-DELETE https://cse-341-test-dhh4.onrender.com/contacts/6456c3e6c67854b6f06f25e5 HTTP/1.1
+DELETE https://cse-341-test-dhh4.onrender.com/contacts/6456cd85ab2439591bf089b4 HTTP/1.1
 
 ###
