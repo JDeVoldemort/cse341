@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const MongoClient = require('mongodb').MongoClient;
 
 const mongodb = require('./db/connect');
@@ -14,7 +16,11 @@ const swaggerDocument = require('./swagger.json');
 
 app
 .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-app.use(bodyParser.json());
+app.use(bodyParser.json())
+.use(cors())
+.use(express.json())
+.use(express.urlencoded({ extended: true }))
+.use('/', require('./routes'));
 // https://cse341-contacts-frontend.netlify.app/
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
