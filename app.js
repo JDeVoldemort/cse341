@@ -1,4 +1,5 @@
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 
