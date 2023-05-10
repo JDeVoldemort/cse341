@@ -9,7 +9,7 @@ const mongodb = require('./db/connect');
 const port = process.env.PORT || 8080;
 const app = express();
 
-
+app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerSpec));
 app.use(bodyParser.json());
 // https://cse341-contacts-frontend.netlify.app/
 app.use((req, res, next) => {
