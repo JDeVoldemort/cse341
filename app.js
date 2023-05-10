@@ -1,5 +1,4 @@
 const express = require('express');
-const swaggerUi = require('swagger-ui-express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 
@@ -10,7 +9,11 @@ const mongodb = require('./db/connect');
 const port = process.env.PORT || 8080;
 const app = express();
 
-app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerSpec));
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app
+.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 app.use(bodyParser.json());
 // https://cse341-contacts-frontend.netlify.app/
 app.use((req, res, next) => {
