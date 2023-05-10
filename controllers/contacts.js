@@ -10,6 +10,7 @@ const getAll = async (req, res, next) => {
 };
 
 const getOne = async (req, res, next) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -20,8 +21,14 @@ const getOne = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
+}
+catch (err) {
+  res.status(500).json(err);
+}
 };
 const createContact = async (req, res) => {
+  try {
+
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -35,8 +42,14 @@ const createContact = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while creating the contact.');
   }
+}
+  catch (err) {
+    res.status(500).json(err);
+  }
 };
 const updateContact = async (req, res) => {
+  try {
+
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
@@ -57,9 +70,15 @@ const updateContact = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the contact.');
   }
+}
+catch (err) {
+  res.status(500).json(err);
+}
 };
 
 const deleteContact = async (req, res) => {
+  try {
+
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: userId }, true);
   console.log(response);
@@ -68,6 +87,10 @@ const deleteContact = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
   }
+}
+catch (err) {
+  res.status(500).json(err);
+}
 };
 
 
