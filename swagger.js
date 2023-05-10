@@ -17,5 +17,5 @@ const endpointsFiles = ['./routes/index.js'];
 
 // Run server after it gets generated
 swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
-  await import('./app.js');
+  await import('./app.js'); 
 });
