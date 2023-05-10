@@ -8,7 +8,7 @@
   "host": "cse-341-test-dhh4.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
